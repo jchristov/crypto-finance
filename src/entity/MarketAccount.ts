@@ -5,7 +5,7 @@ import {AbstractAuditingEntity} from './AbstractAuditingEntity';
 @Entity()
 export class MarketAccount extends AbstractAuditingEntity {
     @PrimaryGeneratedColumn()
-    public  id: number;
+    public id: number;
 
     @Column('varchar')
     public exchange: Exchange;
