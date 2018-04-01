@@ -5,73 +5,27 @@ import {AbstractAuditingEntity} from './AbstractAuditingEntity';
 @Entity()
 export class MarketAccount extends AbstractAuditingEntity {
     @PrimaryGeneratedColumn()
-    private _id: number;
+    public  id: number;
+
+    @Column('varchar')
+    public exchange: Exchange;
 
     @Column()
-    private _exchange: Exchange;
+    public accessKey: string;
 
     @Column()
-    private _accessKey: string;
+    public secretKey: string;
 
-    @Column()
-    private _secretKey: string;
+    @Column({nullable: true})
+    public password: string;
 
-    @Column()
-    private _password: string;
+    @Column({nullable: true})
+    public uid: string;
 
-    @Column()
-    private _uid: string;
-
-    get id(): number {
-        return this._id;
-    }
-
-    set id(value: number) {
-        this._id = value;
-    }
-
-    get exchange(): Exchange {
-        return this._exchange;
-    }
-
-    set exchange(value: Exchange) {
-        this._exchange = value;
-    }
-
-    get accessKey(): string {
-        return this._accessKey;
-    }
-
-    set accessKey(value: string) {
-        this._accessKey = value;
-    }
-
-    get secretKey(): string {
-        return this._secretKey;
-    }
-
-    set secretKey(value: string) {
-        this._secretKey = value;
-    }
-
-    get password(): string {
-        return this._password;
-    }
-
-    set password(value: string) {
-        this._password = value;
-    }
-
-    get uid(): string {
-        return this._uid;
-    }
-
-    set uid(value: string) {
-        this._uid = value;
-    }
-
-    constructor() {
+    constructor(exchange: Exchange, accessKey: string, secretKey: string) {
         super();
-
+        this.exchange = exchange;
+        this.accessKey = accessKey;
+        this.secretKey = secretKey;
     }
 }

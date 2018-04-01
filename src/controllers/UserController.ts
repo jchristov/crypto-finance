@@ -1,5 +1,4 @@
 import {Post, Controller, Body, Res, HttpStatus} from '@nestjs/common';
-import {AppConfig} from '../utils/AppConfig';
 import {LoginDto} from '../dto/LoginDto';
 import AuthUtils from '../utils/AuthUtils';
 
