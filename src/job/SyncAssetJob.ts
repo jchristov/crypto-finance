@@ -40,9 +40,8 @@ export class SyncAssetJob extends AbstractJob {
             try {
                 balances = await exchangeApi.fetchBalance();
             } catch (e) {
-                // log
+                // log test
             }
         }
-
     }
 }
