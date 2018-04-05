@@ -1,6 +1,5 @@
 import {Exchange} from './Exchange';
-import {ExchangeApi} from './ExchangeApi';
-import {Binance, Bitfinex, Bittrex, Gateio, Huobipro, Kucoin, Okex, Poloniex, Zb} from './Exchanges';
+import {ExchangeApi, Binance, Bitfinex, Bittrex, Gateio, Huobipro, Kucoin, Okex, Poloniex, Zb} from './ExchangeApi';
 
 export class ExchangeApiFactory {
 

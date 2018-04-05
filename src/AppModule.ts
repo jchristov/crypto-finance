@@ -12,6 +12,7 @@ import {WalletAccount} from './entity/WalletAccount';
 import {WalletAccountService} from './service/WalletAccountService';
 import {AssetSnapshot} from './entity/AssetSnapshot';
 import {AssetCurrency} from './entity/AssetCurrency';
+import {ServiceFactory} from './service/ServiceFactory';
 
 const DB_OPTION: ConnectionOptions = {
     type: 'mysql',
@@ -33,7 +34,7 @@ const DB_OPTION: ConnectionOptions = {
         AppController,
         UserController,
     ],
-    components: [MarketAccountService, WalletAccountService, AssetService],
+    components: [ServiceFactory, MarketAccountService, WalletAccountService, AssetService],
 })
 export class ApplicationModule {
 
